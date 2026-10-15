@@ -288,7 +288,7 @@ export default function GoldenBitesLanding() {
               <p className="text-xs text-gray-500 font-medium">Clicking dispatches your order directly into WhatsApp with no login required.</p>
               <button
                 onClick={handleWhatsAppRedirect}
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1EBE5D] text-white px-7 py-3 rounded-xl font-bold text-sm shadow-md transition active:scale-95"
+                className="w-full sm:w-auto bg-[#1B4332] hover:bg-[#122e22] text-white px-7 py-3 rounded-xl font-bold text-sm shadow-md transition active:scale-95"
               >
                 Send Order on WhatsApp
               </button>
@@ -345,7 +345,7 @@ export default function GoldenBitesLanding() {
           <a href="https://www.instagram.com/goldenbites_ranchi" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline flex items-center gap-1">
             Instagram ↗
           </a>
-          <span className="text-gray-300 hidden sm:inline">|</span>
+          <span className="text-gray-300 hidden sm:ink">|</span>
           <a href="https://www.facebook.com/people/Golden-Bites-Ranchi/61550094075723/" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline flex items-center gap-1">
             Facebook ↗
           </a>
