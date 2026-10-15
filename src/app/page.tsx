@@ -18,21 +18,21 @@ const deliveryLocalities = [
 const menuItems = [
   {
     id: 'dry-cake',
-    name: "Maa's Signature Dry Cake",
-    desc: 'Soft, aromatic, made for morning & evening chai. No soggy icings.',
-    image: '/images/signature-cake.jpg', // MUST MATCH FILE NAME
+    name: "Signature Dry Cake",
+    desc: 'Soft & aromatic tea cakes. Available in 350g, 1kg, or per-piece.',
+    image: '/signature.jpg',
   },
   {
     id: 'sattu-ladoo',
-    name: 'Desi Roasted Flax Sattu Ladoo',
-    desc: 'Pure ghee, roasted chana sattu, flax seeds. Nutritious & traditional.',
-    image: '/images/sattu-ladoo.jpg', // MUST MATCH FILE NAME
+    name: 'Desi Flax Sattu Ladoo',
+    desc: 'Handcrafted with pure gud and desi ghee. Available per-gram.',
+    image: '/flax-sattu-laddoos.jpg', 
   },
   {
-    id: 'gift-box',
-    name: 'Festive & Family Gift Box',
-    desc: 'Assorted dry cake slices + sattu ladoos packaged for family visits & puja gifts.',
-    image: '/images/gift-box.jpg', // MUST MATCH FILE NAME
+    id: 'dark-chocolate',
+    name: 'Homemade Dark Chocolate Bar',
+    desc: 'Rich, velvety dark chocolate handcrafted with premium cocoa. Pure and indulgent.',
+    image: '/dark-chocolate.jpg', 
   },
 ];
 
@@ -64,8 +64,8 @@ export default function GoldenBitesLanding() {
       {/* Navigation */}
       <header className="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-3 mb-6">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-[#1B4332] text-[#F3B55B] font-bold text-2xl rounded-2xl flex items-center justify-center shadow-md">
-            GB
+          <div className="w-12 h-12 relative rounded-full overflow-hidden shadow-md border-2 border-[#1B4332] bg-white">
+            <Image src="/logo.png" alt="Golden Bites Logo" fill className="object-contain p-0.5" />
           </div>
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-[#1B4332] leading-none">GOLDEN BITES</h1>
@@ -96,6 +96,7 @@ export default function GoldenBitesLanding() {
 
       {/* Bento Grid */}
       <main className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
+        
         {/* Card 1: Hero */}
         <section className="lg:col-span-8 bg-[#F4B251] rounded-[36px] p-8 md:p-12 relative overflow-hidden flex flex-col justify-between min-h-[460px] text-[#281806] shadow-md hover:shadow-xl transition-shadow">
           <div className="z-10 relative">
@@ -108,18 +109,20 @@ export default function GoldenBitesLanding() {
               GOLDEN<br /><span className="text-[#203D2A]">BITES!</span>
             </h2>
             <p className="mt-4 text-base md:text-xl font-medium text-[#46280E] max-w-md leading-relaxed">
-              Maa ke haath ka swad! Freshly baked, wholesome dry cakes & traditional flax sattu ladoos made with love in Ranchi.
+              Experience authentic taste and premium quality! Freshly baked dry cakes & handcrafted ladoos made to order in Ranchi.
             </p>
           </div>
 
           <div className="z-10 relative flex flex-wrap items-end justify-between gap-4 mt-8 pt-6 border-t border-[#df9b34]">
-            <div className="bg-white/90 backdrop-blur px-4 py-2.5 rounded-2xl shadow-sm border border-white">
+            
+            {/* CLICKABLE GOOGLE BADGE */}
+            <a href="https://maps.app.goo.gl/RXaNTDx6rei5FewG9" target="_blank" rel="noopener noreferrer" className="bg-white/90 backdrop-blur px-4 py-2.5 rounded-2xl shadow-sm border border-white hover:scale-105 transition-transform flex flex-col justify-center">
               <div className="flex items-center gap-1 text-[#F59E0B]">
                 {'★★★★★'}
                 <span className="text-[#203D2A] font-bold text-sm ml-1.5">5.0 / 5</span>
               </div>
               <p className="text-[11px] font-bold text-gray-600 uppercase tracking-wider mt-0.5">Google Verified Ranchi Baker</p>
-            </div>
+            </a>
 
             <a
               href="#quick-order"
@@ -132,33 +135,34 @@ export default function GoldenBitesLanding() {
           {/* Hero Image */}
           <div className="absolute -right-16 md:-right-8 -top-8 md:top-6 w-[280px] sm:w-[360px] md:w-[440px] pointer-events-none z-0">
             <div className="relative w-full aspect-square">
-              <Image
-                src="/images/hero-cake.jpg" // MUST MATCH FILE NAME
-                alt="Freshly baked homemade dry cake in Ranchi"
-                fill
-                priority
-                className="object-cover rounded-full border-[10px] md:border-[14px] border-[#F4B251] shadow-2xl"
-              />
+            <Image
+              src="/signature.jpg" 
+              alt="Freshly baked homemade dry cake in Ranchi"
+              fill
+              priority
+              sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, 440px"
+              className="object-cover rounded-full border-[10px] md:border-[14px] border-[#F4B251] shadow-2xl"
+            />
             </div>
           </div>
         </section>
 
         {/* Card 2: Kitchen Story */}
-        <section id="story" className="lg:col-span-4 bg-[#89CFF0] rounded-[36px] p-8 flex flex-col justify-between text-[#0E2C3E] min-h-[280px] shadow-md">
+        <section id="story" className="lg:col-span-4 bg-[#C8D5B9] rounded-[36px] p-8 flex flex-col justify-between text-[#203D2A] min-h-[280px] shadow-md">
           <div>
-            <span className="text-xs uppercase tracking-widest font-extrabold text-[#1B4B68] block mb-1">Our Ranchi Story</span>
-            <h3 className="text-3xl md:text-4xl font-bold leading-tight uppercase">Maa's Kitchen, Pure Recipes</h3>
-            <p className="text-sm font-medium text-[#1E3A4C] mt-3 leading-normal">
-              What started as baking treats for our colony neighbors and family friends in Harmu is now Ranchi's favorite homemade snack stop. No preservatives or shortcuts—just pure home goodness.
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#3B5945] block mb-1">Our Ranchi Story</span>
+            <h3 className="text-3xl md:text-4xl font-bold leading-tight uppercase">Baked by a Mother-Daughter Duo</h3>
+            <p className="text-sm font-medium text-[#203D2A] mt-3 leading-normal">
+              Perfect for daily tea-time, family gatherings, or corporate gifting! All our treats are made to order ensuring maximum freshness. We are constantly experimenting, so keep an eye out for new items being added to the menu soon!
             </p>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-[#76bee0] flex items-center justify-between">
+          <div className="mt-6 pt-4 border-t border-[#A8BCA1] flex items-center justify-between">
             <div>
-              <span className="block text-xl font-bold text-[#0A2231]">Harmu Colony</span>
-              <span className="text-xs font-semibold text-[#1B4B68]">Baking Mon–Sat: 9 AM - 5 PM</span>
+              <span className="block text-xl font-bold text-[#1B4332]">Harmu Colony</span>
+              <span className="text-xs font-semibold text-[#3B5945]">Baking Mon–Sat: 9 AM - 5 PM</span>
             </div>
-            <a href="tel:09631572949" className="w-10 h-10 bg-white text-[#0E2C3E] rounded-full flex items-center justify-center font-bold shadow">
+            <a href="tel:09631572949" className="w-10 h-10 bg-white text-[#1B4332] rounded-full flex items-center justify-center font-bold shadow">
               📞
             </a>
           </div>
@@ -170,17 +174,19 @@ export default function GoldenBitesLanding() {
             <span className="bg-[#203D2A] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Superfood Desi Sweet</span>
             <h3 className="text-4xl font-bold uppercase mt-3 leading-none text-white">Flax Sattu<br /><span className="text-[#381602]">Ladoo</span></h3>
             <p className="text-sm font-semibold text-[#481E05] mt-2 max-w-[210px]">
-              Roasted Chana Sattu + Roasted Flaxseeds (Tisi) + Desi Ghee. High protein, fiber-rich, authentic flavor.
+              Roasted Chana Sattu + Roasted Flaxseeds (Tisi). Made purely in Gud (Jaggery) and Desi Ghee. High protein & authentic flavor!
             </p>
           </div>
-
-          <div className="absolute right-[-25px] bottom-[-20px] w-48 h-48 sm:w-56 sm:h-56 z-0">
-            <div className="relative w-full h-full">
+          
+          {/* BULLETPROOF IMAGE CONTAINER */}
+          <div className="absolute right-[-15px] bottom-[-15px] w-48 h-48 sm:w-56 sm:h-56 z-0">
+            <div className="relative w-full h-full rounded-full overflow-hidden border-[6px] border-[#F28E53] shadow-2xl bg-[#D97706]">
               <Image
-                src="/images/sattu-ladoo.jpg" // MUST MATCH FILE NAME
+                src="/flax-sattu-laddoos.jpg" 
                 alt="Nutritious Desi Flax Sattu Ladoo in Ranchi"
                 fill
-                className="object-cover rounded-full shadow-2xl border-4 border-[#F28E53]"
+                sizes="(max-width: 640px) 192px, 224px"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -213,7 +219,7 @@ export default function GoldenBitesLanding() {
                 <div key={item.id} className="flex items-center justify-between p-3.5 rounded-2xl hover:bg-stone-50 transition border border-gray-100">
                   <div className="flex items-center gap-4">
                     <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-2xl overflow-hidden shrink-0 border border-stone-200">
-                      <Image src={item.image} alt={item.name} fill className="object-cover" />
+                      <Image src={item.image} alt={item.name} fill sizes="64px" className="object-cover object-center" />
                     </div>
                     <div>
                       <h4 className="font-bold text-base md:text-lg text-gray-900">{item.name}</h4>
@@ -232,8 +238,20 @@ export default function GoldenBitesLanding() {
             </div>
           </div>
 
-          {/* Form */}
+          {/* Form & Trust Badge */}
           <div id="quick-order" className="mt-8 pt-6 border-t border-gray-100 bg-[#F8FAF7] -mx-4 md:-mx-6 -mb-4 md:-mb-6 p-6 rounded-b-[36px]">
+            
+            {/* CUTE DELIVERY NOTE */}
+            <div className="mb-5 bg-[#FFF8E7] border border-[#F4B251]/30 p-4 rounded-2xl flex gap-3 items-start shadow-sm">
+              <div className="text-2xl mt-0.5">🛵</div>
+              <div>
+                <p className="text-sm font-bold text-[#46280E] mb-1">Delivery & Shipping Info</p>
+                <p className="text-xs text-[#46280E]/80 font-medium leading-relaxed">
+                  We offer fast hyperlocal delivery across Ranchi! For shipping outside our immediate zones, a minimum order of ₹500 is required (shipping charges discussed upon request). To ensure the highest quality and security, we currently process <strong>prepaid orders only</strong>. 💛
+                </p>
+              </div>
+            </div>
+
             <h4 className="font-bold text-base text-[#1B4332] mb-3">⚡ Quick Ranchi Order / Inquiry Form</h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <input
@@ -277,19 +295,61 @@ export default function GoldenBitesLanding() {
             </div>
           </div>
         </section>
+
+        {/* Card 5: Social Banner */}
+        <section className="lg:col-span-12 bg-[#1B4332] rounded-[36px] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between text-white shadow-md">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <h3 className="text-2xl font-bold uppercase tracking-wide">Follow Our Daily Bakes</h3>
+            <p className="text-[#A8BCA1] text-sm mt-1 font-medium">Join the Golden Bites community for fresh updates, new flavors, and behind-the-scenes!</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://www.instagram.com/goldenbites_ranchi" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-2xl backdrop-blur-sm transition-colors border border-white/20 flex items-center gap-2"
+            >
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span className="font-bold text-sm tracking-wide">Instagram</span>
+            </a>
+            
+            <a 
+              href="https://www.facebook.com/people/Golden-Bites-Ranchi/61550094075723/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-2xl backdrop-blur-sm transition-colors border border-white/20 flex items-center gap-2"
+            >
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+              <span className="font-bold text-sm tracking-wide">Facebook</span>
+            </a>
+          </div>
+        </section>
+
       </main>
 
       {/* Footer */}
       <footer className="max-w-7xl mx-auto w-full mt-10 py-6 px-4 border-t border-[#d8e0d6] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600">
-        <div>
+        <div className="text-center md:text-left">
           <p className="font-bold text-[#1B4332] text-sm">Golden Bites — Homemade Treats & Traditional Ladoos</p>
-          <p>Harmu Housing Colony, Ranchi, Jharkhand 834002 | Mon-Sat, 9:00 AM – 5:00 PM</p>
+          <p className="mt-1">Harmu Housing Colony, Ranchi, Jharkhand 834002 | Mon-Sat, 9:00 AM – 5:00 PM</p>
         </div>
-        <div className="flex items-center gap-4">
-          <a href="https://maps.app.goo.gl/RXaNTDx6rei5FewG9" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline">
-            View Google Profile ↗
+        <div className="flex flex-wrap justify-center items-center gap-4">
+          <a href="https://maps.app.goo.gl/RXaNTDx6rei5FewG9" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline flex items-center gap-1">
+            Google Reviews ↗
           </a>
-          <span>|</span>
+          <span className="text-gray-300 hidden sm:inline">|</span>
+          <a href="https://www.instagram.com/goldenbites_ranchi" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline flex items-center gap-1">
+            Instagram ↗
+          </a>
+          <span className="text-gray-300 hidden sm:inline">|</span>
+          <a href="https://www.facebook.com/people/Golden-Bites-Ranchi/61550094075723/" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1B4332] hover:underline flex items-center gap-1">
+            Facebook ↗
+          </a>
+          <span className="text-gray-300 hidden sm:inline">|</span>
           <span className="font-semibold text-gray-700">Phone: +91 96315 72949</span>
         </div>
       </footer>
