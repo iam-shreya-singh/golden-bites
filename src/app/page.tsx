@@ -26,7 +26,7 @@ const menuItems = [
     id: 'sattu-ladoo',
     name: 'Desi Flax Sattu Ladoo',
     desc: 'Handcrafted with pure gud and desi ghee. Available per-gram.',
-    image: '/flax-sattu-laddoos.jpg', 
+    image: '/flaxsattuladdoo.png', 
   },
   {
     id: 'dark-chocolate',
@@ -65,7 +65,7 @@ export default function GoldenBitesLanding() {
       <header className="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-3 mb-6">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 relative rounded-full overflow-hidden shadow-md border-2 border-[#1B4332] bg-white">
-            <Image src="/logo.png" alt="Golden Bites Logo" fill className="object-contain p-0.5" />
+            <Image src="/logo2.png" alt="Golden Bites Logo" fill className="object-contain p-0.5" />
           </div>
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-[#1B4332] leading-none">GOLDEN BITES</h1>
@@ -126,7 +126,7 @@ export default function GoldenBitesLanding() {
 
             <a
               href="#quick-order"
-              className="bg-[#1B4332] hover:bg-[#122e22] text-white px-7 py-3.5 rounded-full text-lg font-bold shadow-xl transition-all hover:scale-105"
+              className="bg-[#1B4332] hover:bg-[rgb(18,46,34)] text-white px-7 py-3.5 rounded-full text-lg font-bold shadow-xl transition-all hover:scale-105"
             >
               Order In Ranchi →
             </a>
@@ -136,7 +136,7 @@ export default function GoldenBitesLanding() {
           <div className="absolute -right-16 md:-right-8 -top-8 md:top-6 w-[280px] sm:w-[360px] md:w-[440px] pointer-events-none z-0">
             <div className="relative w-full aspect-square">
             <Image
-              src="/signature.jpg" 
+              src="/logo2.png" 
               alt="Freshly baked homemade dry cake in Ranchi"
               fill
               priority
@@ -182,7 +182,7 @@ export default function GoldenBitesLanding() {
           <div className="absolute right-[-15px] bottom-[-15px] w-48 h-48 sm:w-56 sm:h-56 z-0">
             <div className="relative w-full h-full rounded-full overflow-hidden border-[6px] border-[#F28E53] shadow-2xl bg-[#D97706]">
               <Image
-                src="/flax-sattu-laddoos.jpg" 
+                src="/flaxsattuladdoo.png" 
                 alt="Nutritious Desi Flax Sattu Ladoo in Ranchi"
                 fill
                 sizes="(max-width: 640px) 192px, 224px"
