@@ -440,6 +440,62 @@ export default function GoldenBitesLanding() {
 
       </main>
 
+      {/* ========================================= */}
+        {/* SEO SECTION: WHY CHOOSE GOLDEN BITES */}
+        {/* ========================================= */}
+        <section className="lg:col-span-12 bg-[#FFF8E7] rounded-[36px] p-8 md:p-10 shadow-md border border-[#F4B251]/30">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#D97706]">Authentic & Local</span>
+            <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#281806] mt-2 mb-4">
+              Why Golden Bites is Ranchi's Favorite Home Bakery
+            </h3>
+            <p className="text-sm md:text-base font-medium text-[#46280E]/80 leading-relaxed">
+              Based in the heart of Harmu Housing Colony, we are a mother-daughter duo passionate about reviving traditional Indian flavors and bringing premium, freshly baked homemade cakes and pure ghee ladoos directly to your doorstep anywhere in Ranchi.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            
+            {/* SEO Feature 1 */}
+            <div className="bg-white p-5 rounded-[24px] border border-[#F4B251]/20 shadow-sm text-center flex flex-col items-center">
+              <div className="w-12 h-12 bg-[#F4B251]/10 rounded-full flex items-center justify-center text-2xl mb-3">
+                🌾
+              </div>
+              <h4 className="font-bold text-[#1B4332] text-sm uppercase tracking-wide mb-1.5">Premium Ingredients</h4>
+              <p className="text-xs text-gray-600 font-medium">Crafted with pure desi ghee, natural jaggery (gud), and wholesome roasted sattu. No artificial preservatives.</p>
+            </div>
+
+            {/* SEO Feature 2 */}
+            <div className="bg-white p-5 rounded-[24px] border border-[#F4B251]/20 shadow-sm text-center flex flex-col items-center">
+              <div className="w-12 h-12 bg-[#C8D5B9]/30 rounded-full flex items-center justify-center text-2xl mb-3">
+                👩‍🍳
+              </div>
+              <h4 className="font-bold text-[#1B4332] text-sm uppercase tracking-wide mb-1.5">100% Homemade</h4>
+              <p className="text-xs text-gray-600 font-medium">Every dry cake and nutty chocolate treat is handcrafted in our FSSAI-registered home kitchen for ultimate hygiene and taste.</p>
+            </div>
+
+            {/* SEO Feature 3 */}
+            <div className="bg-white p-5 rounded-[24px] border border-[#F4B251]/20 shadow-sm text-center flex flex-col items-center">
+              <div className="w-12 h-12 bg-[#F28E53]/10 rounded-full flex items-center justify-center text-2xl mb-3">
+                🔥
+              </div>
+              <h4 className="font-bold text-[#1B4332] text-sm uppercase tracking-wide mb-1.5">Baked on Order</h4>
+              <p className="text-xs text-gray-600 font-medium">We do not store stale inventory. Your order is prepared fresh from scratch on the day of delivery.</p>
+            </div>
+
+            {/* SEO Feature 4 */}
+            <div className="bg-white p-5 rounded-[24px] border border-[#F4B251]/20 shadow-sm text-center flex flex-col items-center">
+              <div className="w-12 h-12 bg-[#1B4332]/10 rounded-full flex items-center justify-center text-2xl mb-3">
+                🛵
+              </div>
+              <h4 className="font-bold text-[#1B4332] text-sm uppercase tracking-wide mb-1.5">Ranchi Delivery</h4>
+              <p className="text-xs text-gray-600 font-medium">Hyperlocal delivery across Harmu, Ashok Nagar, Lalpur, Kanke Road, and all major areas in Ranchi.</p>
+            </div>
+
+          </div>
+        </section>
+        {/* ========================================= */}
+
       {/* Footer */}
       <footer className="max-w-7xl mx-auto w-full mt-10 py-6 px-4 border-t border-[#d8e0d6] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600">
         <div className="text-center md:text-left">
