@@ -18,8 +18,8 @@ const deliveryLocalities = [
 const menuItems = [
   {
     id: 'dry-cake',
-    name: "Signature Dry Cake",
-    desc: 'Soft & aromatic tea cakes. Available in 350g, 1kg, or per-piece.',
+    name: "Signature Dry Cakes",
+    desc: 'Soft, spongey and scrumptious. Available in 450gms, 1kg.',
     image: '/signature.jpg',
   },
   {
@@ -27,6 +27,13 @@ const menuItems = [
     name: 'Desi Flax Sattu Ladoo',
     desc: 'Handcrafted with pure gud and desi ghee. Available per-gram.',
     image: '/flaxsattuladdoo.png', 
+  },
+
+  {
+    id: 'nutty-treats',
+    name: 'Nutty Date & Chocolate Treats',
+    desc: 'Wholesome dates blended with cashews and almonds, topped with a rich dark chocolate coating and crunchy nuts.',
+    image: '/nutty-treats.jpg', 
   },
   {
     id: 'dark-chocolate',
@@ -183,7 +190,7 @@ export default function GoldenBitesLanding() {
             <div className="relative w-full h-full rounded-full overflow-hidden border-[6px] border-[#F28E53] shadow-2xl bg-[#D97706]">
               <Image
                 src="/flaxsattuladdoo.png" 
-                alt="Nutritious Desi Flax Sattu Ladoo in Ranchi"
+                alt="Nutritious Desi Flax Sattu Protein Laddoo in Ranchi"
                 fill
                 sizes="(max-width: 640px) 192px, 224px"
                 className="object-cover object-center"
@@ -295,6 +302,106 @@ export default function GoldenBitesLanding() {
             </div>
           </div>
         </section>
+        {/* ========================================= */}
+        {/* WALL OF LOVE / SOCIAL PROOF SECTION */}
+        {/* ========================================= */}
+        <section id="reviews" className="lg:col-span-12 bg-white rounded-[36px] p-8 md:p-10 shadow-md border border-gray-100 flex flex-col justify-between">
+          <div className="text-center mb-8">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#52796F]">Wall of Love</span>
+            <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#1B4332] mt-1">Happy Ranchi Customers</h3>
+            <p className="text-sm font-medium text-gray-500 mt-2">Real feedback and WhatsApp messages from our amazing Golden Bites family!</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Review 1: Text-based (Google/Verbal) */}
+            <div className="bg-[#F8FAF7] p-6 rounded-[28px] border border-[#d8e0d6] flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex text-[#F59E0B] text-lg">★★★★★</div>
+              <p className="text-sm text-[#46280E] italic flex-grow leading-relaxed">
+                "I ordered laddus from here for gifting it to someone and got good reviews from them regarding taste and quality. Also the owners are very polite and friendly ✨"
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-[#d8e0d6]">
+                <div className="w-10 h-10 rounded-full bg-[#1B4332] flex items-center justify-center font-bold text-white text-sm">
+                  P
+                </div>
+                <div>
+                  <span className="block text-sm font-bold text-[#1B4332]">Anupama</span>
+                  <span className="block text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Google Review</span>
+                </div>
+              </div>
+            </div>
+
+                {/* Review 2: Stacked WhatsApp Cropped Messages */}
+            <div className="bg-[#F8FAF7] p-5 rounded-[28px] border border-[#d8e0d6] flex flex-col shadow-sm hover:shadow-md transition-shadow">
+              
+              <div className="flex-grow flex flex-col gap-3 justify-center">
+                {/* Cropped Message 1 */}
+                <div className="relative w-full h-16 sm:h-20 rounded-[16px] overflow-hidden shadow-sm border border-gray-100 bg-white">
+                  <Image 
+                    src="/wa-msg-1.jpg" 
+                    alt="WhatsApp Review 1" 
+                    fill 
+                    className="object-cover object-left" 
+                  />
+                </div>
+               {/* Cropped Message 2 (Taller for longer text) */}
+               <div className="relative w-[90%] self-end h-35 sm:h-55 rounded-[16px] overflow-hidden shadow-sm border border-gray-100 bg-white">
+                  <Image 
+                    src="/wa-msg-2.jpg" 
+                    alt="WhatsApp Review 2" 
+                    fill 
+                    className="object-contain sm:object-cover object-top" 
+                  />
+                </div>
+
+                {/* Cropped Message 3 */}
+                <div className="relative w-full h-16 sm:h-20 rounded-[16px] overflow-hidden shadow-sm border border-gray-100 bg-white">
+                  <Image 
+                    src="/wa-msg-3.jpg" 
+                    alt="WhatsApp Review 3" 
+                    fill 
+                    className="object-cover object-left" 
+                  />
+                </div>
+
+                {/* Optional 4th Message (Uncomment to use) */}
+                {/* 
+                <div className="relative w-[90%] self-end h-16 sm:h-20 rounded-[16px] overflow-hidden shadow-sm border border-gray-100 bg-white">
+                  <Image src="/wa-msg-4.jpg" alt="WhatsApp Review 4" fill className="object-cover object-left" />
+                </div> 
+                */}
+              </div>
+
+              <div className="mt-5 pt-4 border-t border-[#d8e0d6] flex justify-between items-center">
+                <span className="text-xs font-bold text-[#1B4332] flex items-center gap-1.5">
+                  <span className="text-green-500 text-base">💬</span> WhatsApp DMs
+                </span>
+                <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">
+                  Verified Buyers
+                </span>
+              </div>
+            </div>
+
+            {/* Review 3: Text-based (Google/Verbal) */}
+            <div className="bg-[#F8FAF7] p-6 rounded-[28px] border border-[#d8e0d6] flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex text-[#F59E0B] text-lg">★★★★★</div>
+              <p className="text-sm text-[#46280E] italic flex-grow leading-relaxed">
+                "Loved their laddoos ❤️ Made with nutritious flaxseeds and wholesome dry fruits, they’re a perfect combination of health and taste. A wonderful option for mindful snacking without compromising on flavour. And their newly introduced Nutty Treat is a 100/10.Highly recommended! 😇✨"
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-[#d8e0d6]">
+                <div className="w-10 h-10 rounded-full bg-[#F4B251] flex items-center justify-center font-bold text-white text-sm">
+                  R
+                </div>
+                <div>
+                  <span className="block text-sm font-bold text-[#1B4332]">Richa S.</span>
+                  <span className="block text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Google Review</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {/* ========================================= */}
 
         {/* Card 5: Social Banner */}
         <section className="lg:col-span-12 bg-[#1B4332] rounded-[36px] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between text-white shadow-md">
@@ -334,7 +441,7 @@ export default function GoldenBitesLanding() {
       {/* Footer */}
       <footer className="max-w-7xl mx-auto w-full mt-10 py-6 px-4 border-t border-[#d8e0d6] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600">
         <div className="text-center md:text-left">
-          <p className="font-bold text-[#1B4332] text-sm">Golden Bites — Homemade Treats & Traditional Ladoos</p>
+          <p className="font-bold text-[#1B4332] text-sm">Golden Bites — Homemade Treats, Ladoos, Dry Cakes, Muffins & Chocolates in Ranchi</p>
           <p className="mt-1">Harmu Housing Colony, Ranchi, Jharkhand 834002 | Mon-Sat, 9:00 AM – 5:00 PM</p>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4">
