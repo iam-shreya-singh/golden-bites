@@ -68,15 +68,18 @@ export default function GoldenBitesLanding() {
 
   return (
     <div className="min-h-screen bg-[#EBF0E9] text-[#2D2D2D] p-3 sm:p-6 md:p-10 flex flex-col justify-between font-sans">
-      {/* Navigation */}
-      <header className="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-3 mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 relative rounded-full overflow-hidden shadow-md border-2 border-[#1B4332] bg-white">
+    
+    {/* Navigation */}
+    <header className="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-1 sm:px-3 mb-4 sm:mb-6">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 relative rounded-full overflow-hidden shadow-md border-2 border-[#1B4332] bg-white shrink-0">
             <Image src="/logo2.png" alt="Golden Bites Logo" fill className="object-contain p-0.5" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-[#1B4332] leading-none">GOLDEN BITES</h1>
-            <p className="text-xs font-semibold text-[#52796F] tracking-wider uppercase mt-1">Ghar Ka Swad • Harmu, Ranchi</p>
+            <h1 className="text-lg sm:text-2xl font-bold tracking-tight text-[#1B4332] leading-none">GOLDEN BITES</h1>
+            <p className="text-[9px] sm:text-xs font-semibold text-[#52796F] tracking-wider uppercase mt-1">
+              Ghar Ka Swad <span className="hidden sm:inline">• Harmu, Ranchi</span>
+            </p>
           </div>
         </div>
 
@@ -95,9 +98,9 @@ export default function GoldenBitesLanding() {
 
         <button
           onClick={handleWhatsAppRedirect}
-          className="bg-[#1B4332] hover:bg-[#143225] text-white px-5 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg transition-all active:scale-95"
+          className="bg-[#1B4332] hover:bg-[#143225] text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-lg transition-all active:scale-95 shrink-0"
         >
-          Direct WhatsApp
+          <span className="hidden sm:inline">Direct</span> WhatsApp
         </button>
       </header>
 
@@ -105,55 +108,54 @@ export default function GoldenBitesLanding() {
       <main className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
         
         {/* Card 1: Hero */}
-        <section className="lg:col-span-8 bg-[#F4B251] rounded-[36px] p-8 md:p-12 relative overflow-hidden flex flex-col justify-between min-h-[460px] text-[#281806] shadow-md hover:shadow-xl transition-shadow">
+        <section className="lg:col-span-8 bg-[#F4B251] rounded-[36px] p-6 sm:p-8 md:p-12 relative overflow-hidden flex flex-col justify-between min-h-[400px] sm:min-h-[460px] text-[#281806] shadow-md hover:shadow-xl transition-shadow">
           <div className="z-10 relative">
-            <div className="inline-flex items-center gap-2 bg-[#1B4332] text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-wide shadow mb-5">
+            <div className="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 bg-[#1B4332] text-white px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs md:text-sm font-bold tracking-wide shadow mb-4 sm:mb-5">
               <span>100% PURE & HOMEMADE</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F4B251]"></span>
-              <span>HARMU, RANCHI</span>
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#F4B251]"></span>
+              <span>RANCHI</span>
             </div>
-            <h2 className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[0.9] tracking-tight uppercase">
+            <h2 className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[0.9] tracking-tight uppercase relative z-20">
               GOLDEN<br /><span className="text-[#203D2A]">BITES!</span>
             </h2>
-            <p className="mt-4 text-base md:text-xl font-medium text-[#46280E] max-w-md leading-relaxed">
-              Experience authentic taste and premium quality! Freshly baked dry cakes & handcrafted ladoos made to order in Ranchi.
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-xl font-medium text-[#46280E] max-w-[240px] sm:max-w-md leading-relaxed relative z-20">
+              Experience authentic taste and premium quality! Freshly baked dry cakes & handcrafted ladoos made to order.
             </p>
           </div>
 
-          <div className="z-10 relative flex flex-wrap items-end justify-between gap-4 mt-8 pt-6 border-t border-[#df9b34]">
+          <div className="z-10 relative flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-end justify-between gap-4 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-[#df9b34]/50 sm:border-[#df9b34]">
             
             {/* CLICKABLE GOOGLE BADGE */}
-            <a href="https://maps.app.goo.gl/RXaNTDx6rei5FewG9" target="_blank" rel="noopener noreferrer" className="bg-white/90 backdrop-blur px-4 py-2.5 rounded-2xl shadow-sm border border-white hover:scale-105 transition-transform flex flex-col justify-center">
+            <a href="https://maps.app.goo.gl/RXaNTDx6rei5FewG9" target="_blank" rel="noopener noreferrer" className="bg-white/90 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl shadow-sm border border-white hover:scale-105 transition-transform flex flex-col justify-center">
               <div className="flex items-center gap-1 text-[#F59E0B]">
-                {'★★★★★'}
-                <span className="text-[#203D2A] font-bold text-sm ml-1.5">5.0 / 5</span>
+                <span className="text-sm sm:text-base">★★★★★</span>
+                <span className="text-[#203D2A] font-bold text-xs sm:text-sm ml-1">5.0 / 5</span>
               </div>
-              <p className="text-[11px] font-bold text-gray-600 uppercase tracking-wider mt-0.5">Google Verified Ranchi Baker</p>
+              <p className="text-[9px] sm:text-[11px] font-bold text-gray-600 uppercase tracking-wider mt-0.5">Google Verified Baker</p>
             </a>
 
             <a
               href="#quick-order"
-              className="bg-[#1B4332] hover:bg-[rgb(18,46,34)] text-white px-7 py-3.5 rounded-full text-lg font-bold shadow-xl transition-all hover:scale-105"
+              className="bg-[#1B4332] hover:bg-[rgb(18,46,34)] text-white w-full sm:w-auto text-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-sm sm:text-lg font-bold shadow-xl transition-all hover:scale-105"
             >
               Order In Ranchi →
             </a>
           </div>
 
-          {/* Hero Image */}
-          <div className="absolute -right-16 md:-right-8 -top-8 md:top-6 w-[280px] sm:w-[360px] md:w-[440px] pointer-events-none z-0">
+          {/* Hero Image - Adjusted for Mobile */}
+          <div className="absolute -right-20 top-12 sm:-right-8 sm:-top-8 md:top-6 w-[220px] sm:w-[360px] md:w-[440px] pointer-events-none z-0 opacity-40 sm:opacity-100">
             <div className="relative w-full aspect-square">
             <Image
               src="/logo2.png" 
               alt="Freshly baked homemade dry cake in Ranchi"
               fill
               priority
-              sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, 440px"
-              className="object-cover rounded-full border-[10px] md:border-[14px] border-[#F4B251] shadow-2xl"
+              sizes="(max-width: 640px) 220px, (max-width: 768px) 360px, 440px"
+              className="object-cover rounded-full border-[6px] sm:border-[10px] md:border-[14px] border-[#F4B251] shadow-2xl"
             />
             </div>
           </div>
         </section>
-
         {/* Card 2: Kitchen Story */}
         <section id="story" className="lg:col-span-4 bg-[#C8D5B9] rounded-[36px] p-8 flex flex-col justify-between text-[#203D2A] min-h-[280px] shadow-md">
           <div>
